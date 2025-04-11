@@ -246,6 +246,20 @@ section {
   font-size: 2rem;
   color: #13131a;
 }
+.quantity-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.qty-btn {
+  padding: 5px 15px;
+  font-size: 20px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 .header .cart-items-container .cart-item .content .price {
   font-size: 1.5rem;

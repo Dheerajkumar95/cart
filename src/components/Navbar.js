@@ -9,10 +9,9 @@ const Navbar = ({ cartItems, setCartItems,count,setcount}) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time (e.g., 2 seconds)
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Adjust duration as needed
+    }, 2000);  
     return () => clearTimeout(timer);
   }, []);
   const navbarRef = useRef();
@@ -112,6 +111,22 @@ let hiddenName = useRef();
       return total + (item.Menuprice * item.qnty);
     }, 0);
   };
+  const increaseQuantity = (id) => {
+    setCartItems(prevItems =>
+      prevItems.map(item =>
+        item.id === id ? { ...item, qnty: item.qnty + 1 } : item
+      )
+    );
+  };
+  
+  const decreaseQuantity = (id) => {
+    setCartItems(prevItems =>
+      prevItems.map(item =>
+        item.id === id && item.qnty > 1 ? { ...item, qnty: item.qnty - 1 } : item
+      )
+    );
+  };
+  
   return (
     <>
     {isLoading ? (
@@ -175,6 +190,10 @@ let hiddenName = useRef();
                   <img src={item.img} alt={item.Name} />
                   <div className="price">₹ {item.Menuprice}</div>
                   <p>Quantity : {item.qnty}</p>
+                  <div className="quantity-controls">
+                  <button onClick={() => increaseQuantity(item.id)} className="qty-btn">+</button>
+                  <button onClick={() => decreaseQuantity(item.id)} className="qty-btn">-</button>
+                 </div>
                 </div>
               </div> 
             ))
