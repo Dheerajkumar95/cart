@@ -400,8 +400,8 @@ section {
 
 .header .cart-items-container2 .btn {
   position: relative;
-  text-align: center;
-  width: 35%;  
+  text-align:center;
+  width: 40%;  
   height:40px;
   margin: 2rem 17.5rem;
 }
@@ -591,6 +591,7 @@ section {
 }
 .header .cart-items-container4 .ordered-items {
   margin-top: 1rem;
+  margin-left:1.5rem;
   text-align: center;
 }
 .header .cart-items-container4 .ordered-items-list {
@@ -1077,7 +1078,7 @@ section {
     font-size: 50%;
   }
   .header .cart-items-container1 .btn {
-    margin: -4rem 22rem;
+    margin: -4rem 14rem;
   }
   .header .cart-items-container3 h1 {
     position:absolute;

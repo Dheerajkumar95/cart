@@ -422,7 +422,7 @@ let hiddenName = useRef();
       <div class="tracker">
     <div class="step line">
       <div class="icon">🟢</div>
-      <div class="label">Order Placed</div>
+      <div class="label">Placed</div>
     </div>
     <div class="step line">
       <div class="icon">🛒</div>
@@ -430,7 +430,7 @@ let hiddenName = useRef();
     </div>
     <div class="step">
       <div class="icon">🚚</div>
-      <div class="label">Out for Delivery</div>
+      <div class="label">On The Way</div>
     </div>
     <div class="step">
       <div class="icon">✅</div>
