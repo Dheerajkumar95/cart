@@ -601,7 +601,16 @@ section {
   background-color: gold;
   z-index: 0;
 }
-
+.header .cart-items-container4 .step.white-line::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 58%;
+  width: 77%;
+  height: 3px;
+  background-color: white;
+  z-index: 0;
+}
 .header .cart-items-container4 .icon {
   font-size: 28px;
   z-index: 1;

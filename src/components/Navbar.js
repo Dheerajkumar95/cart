@@ -428,7 +428,7 @@ let hiddenName = useRef();
       <div class="icon">🛒</div>
       <div class="label">Preparing</div>
     </div>
-    <div class="step">
+    <div class="step line white-line">
       <div class="icon">🚚</div>
       <div class="label">On The Way</div>
     </div>
