@@ -401,7 +401,7 @@ let hiddenName = useRef();
         <button  onClick={MyOrder} className="btn1">My order</button>
         </div> 
     </div>
-    <div className="cart-items-container4" ref={MyOrderRef}>
+    <div id="dkkk" className="cart-items-container4" ref={MyOrderRef}>
         {orderPlaced && (
   <div className="order-confirmation">
     <h3>🎉 Thank you for your order!</h3>
@@ -414,7 +414,7 @@ let hiddenName = useRef();
         {orderedItems.map((item, index) => (
           <div key={index} className="ordered-item">
             <img src={item.img} alt={item.Name} className="ordered-item-img" />
-            <p>{item.Name}</p>
+            <p>{item.Name}&nbsp;&nbsp;Q:{item.qnty}</p>
             </div>
         ))}
         <p><strong>Total: ₹ {total}/-</strong></p>

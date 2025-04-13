@@ -529,57 +529,6 @@ section {
 .header .cart-items-container4.active {
   right: 0;
 }
-.header .cart-items-container4 .tracker-container {
-  display: flex;
-  position:relative;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  max-width: 600px;
-  margin: auto;
-  background:rgb(3, 3, 3);
-  color:#ffc107;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header .cart-items-container4 .tracker-step {
-  text-align: center;
-  flex: 1;
-  position: relative;
-  opacity: 0.4;
-  transition: all 0.3s ease;
-}
-
-.header .cart-items-container4 .tracker-step.active {
-  opacity: 1;
-  font-weight: bold;
-}
-
-.header .cart-items-container4 .tracker-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.header .cart-items-container4 .tracker-label {
-  font-size: 0.9rem;
-}
-
-/* Optional: Connectors */
-.header .cart-items-container4 .tracker-step::after {
-  content: "";
-  position: absolute;
-  top: 1.3rem;
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  background: #ffc107;
-  z-index: -1;
-}
-
-.header .cart-items-container4 .tracker-step:last-child::after {
-  display: none;
-}
 .header .cart-items-container4 .order-confirmation {
   background:rgb(8, 8, 8);
   padding: 1rem;
@@ -602,12 +551,16 @@ section {
 }
 .header .cart-items-container4 .ordered-items-list p strong {
   color:red;
+  font-size:1.5rem;
 }
 .header .cart-items-container4 .ordered-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+}
+.header .cart-items-container4 .ordered-item p {
+  font-size:1.5rem;
 }
 .header .cart-items-container4 .ordered-item-img {
   width: 100px;
@@ -616,9 +569,11 @@ section {
  
 }
 .header .cart-items-container4 .tracker {
+  position:relative;
   background-color: #000;
   color: #fff;
   border-radius: 10px;
+  margin-top:1.1rem;
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
@@ -641,14 +596,14 @@ section {
   position: absolute;
   top: 18px;
   left: 58%;
-  width: 83%;
+  width: 77%;
   height: 3px;
   background-color: gold;
   z-index: 0;
 }
 
 .header .cart-items-container4 .icon {
-  font-size: 24px;
+  font-size: 28px;
   z-index: 1;
 }
 
@@ -656,7 +611,7 @@ section {
   margin-top: 8px;
   color: gold;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
 }
 .home {
   min-height: 100vh;
