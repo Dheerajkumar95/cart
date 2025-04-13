@@ -57,18 +57,18 @@ section {
 }
 
 .btn {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 0.9rem 3rem;
-  font-size: 1.7rem;
-  color:#010103;
-  background: #ffc107;
-  border-radius: 10px;
+  background:#ffc107;
+  color: #010103;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .btn:hover {
-  letter-spacing: 0.2rem;
+  opacity: 0.9;
+  border: 2px solid black;
 }
 
 .header {
@@ -195,7 +195,7 @@ section {
   position: absolute;
   top: 102%;
   right: -150%;
-  height: calc(103vh - 9.5rem);
+  height: calc(101vh - 9.5rem);
   width: 20rem;
   background: #fff;
   padding: 0 1.5rem;
@@ -215,6 +215,8 @@ section {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0.1px rgba(0.1, 0.1, 0.1,0.1); /* Shadow on all sides */
 }
 
 .header .cart-items-container .cart-item .fa-times {
@@ -231,15 +233,18 @@ section {
 }
 .header .cart-items-container .cart-item img {
   height: 6rem;
+  margin-left:1rem;
   border-radius: 20%;
 }
 .header .cart-items-container .cart-item .content h3 {
+  margin-left:1rem;
   font-size: 1.5rem;
   color: #13131a;
   
 }
 .header .cart-items-container .cart-item .content p {
   font-size: 1.5rem;
+  margin-left:2rem;
   color: #13131a;
 }
 .total{
@@ -252,30 +257,41 @@ section {
   margin-top: 0.5rem;
 }
 
-.qty-btn {
-  padding: 5px 15px;
+.qty-btn1 {
+  padding: 2px 15px;
   font-size: 20px;
-  background-color: #ddd;
+  background-color: #ffc107;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+   margin-left:3rem;
 }
-
+.qty-btn2 {
+  padding: 2px 15px;
+  font-size: 20px;
+  background-color:#ffc107;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+   margin-left:0.2rem;
+}
 .header .cart-items-container .cart-item .content .price {
   font-size: 1.5rem;
   color: #ffc107;
   padding-bottom: 1rem;
+  margin-left:2rem;
 }
-.header .cart-items-container .btn {
-  width: 100%;
-  text-align: center;
-  height:40px;
+ 
+.header .cart-items-container .cart-item .content .quantity-controls p{
+  font-size: 2rem;
+  margin-left:.1rem;
+
 }
 .header .cart-items-container1 {
   position: absolute;
   top: 100%;
   right: -150%;
-  height: calc(103vh - 9.5rem);
+  height: calc(101vh - 9.5rem);
   width: 50rem;
   background: #fff;
   padding: 0 1.5rem;
@@ -287,9 +303,9 @@ section {
 .header .cart-items-container1 .btn {
   position: relative;
   text-align: center;
-  width: 35%;  
+  width: 60%;  
   height:40px;
-  margin: -2rem 18rem;
+  margin: -2rem 14rem;
 }
 .header .cart-items-container1   img {
   position: relative;
@@ -297,11 +313,35 @@ section {
   max-width: 300px;
   margin: 8rem 8rem;
 }
+.header .cart-items-container1 .create{
+  position: absolute;
+  align-items:center;
+  font-size: 1.3rem;
+  margin: 2rem 16rem;
+}
+.header .cart-items-container1 .create button {
+  position:fixed;
+  background: none;
+  color: #ffc107;
+  border: none;
+  font-size: 1.3rem;
+  margin-left: 4px;  
+  border-bottom: 2px solid transparent;
+  display: inline; 
+  cursor: pointer;
+  transition: border-bottom 0.3s ease;
+}
+
+.header .cart-items-container1 .create button:hover {
+  border-bottom: 2px solid #ffc107;
+}
+
+
 .header .cart-items-container2 {
   position: absolute;
   top: 100%;
   right: -150%;
-  height: calc(103vh - 9.5rem);
+  height: calc(101vh - 9.5rem);
   width: 50rem;
   background: #fff;
   padding: 0 1.5rem;
@@ -325,16 +365,39 @@ section {
   margin-top:-7rem;
   color: #ffc107;
 }
-.header .cart-items-container2  input{
+.header .cart-items-container2 label {
   position: relative;
-  font-size: 1.6rem;
-  color: #13131a;
-  border-bottom: 0.2rem solid #ffc107;
-  margin-left:18rem;
-  margin-top:7rem;
-   
-
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #333;
+  margin-left: 13rem;
+  display: inline-block;
+  margin-top: 1rem;
 }
+.header .cart-items-container2 input {
+  position: relative;
+  font-size: 1.5rem;
+  padding: 1.2rem 1rem;
+  color: #333;
+  margin: 1rem 12rem;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header .cart-items-container2 input:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+  background-color: #fff;
+}
+.header .cart-items-container2 input::placeholder {
+  color: #999;
+  text-transform: none; 
+}
+
 .header .cart-items-container2 .btn {
   position: relative;
   text-align: center;
@@ -346,7 +409,7 @@ section {
   position: absolute;
   top: 100%;
   right: -150%;
-  height: calc(103vh - 9.5rem);
+  height: calc(101vh - 9.5rem);
   width: 50rem;
   background: #fff;
   padding: 0 1.5rem;
@@ -454,6 +517,146 @@ section {
   border-radius: 100%;
   cursor: pointer;
 }
+.header .cart-items-container4 {
+  position: absolute;
+  top: 100%;
+  right: -150%;
+  height: calc(101vh - 9rem);
+  width: 50rem;
+  background: #fff;
+  border-radius: 10px;
+}
+.header .cart-items-container4.active {
+  right: 0;
+}
+.header .cart-items-container4 .tracker-container {
+  display: flex;
+  position:relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+  background:rgb(3, 3, 3);
+  color:#ffc107;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .cart-items-container4 .tracker-step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.header .cart-items-container4 .tracker-step.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.header .cart-items-container4 .tracker-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header .cart-items-container4 .tracker-label {
+  font-size: 0.9rem;
+}
+
+/* Optional: Connectors */
+.header .cart-items-container4 .tracker-step::after {
+  content: "";
+  position: absolute;
+  top: 1.3rem;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: #ffc107;
+  z-index: -1;
+}
+
+.header .cart-items-container4 .tracker-step:last-child::after {
+  display: none;
+}
+.header .cart-items-container4 .order-confirmation {
+  background:rgb(8, 8, 8);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color:#ffc107;
+}
+.header .cart-items-container4 .ordered-items {
+  margin-top: 1rem;
+  text-align: center;
+}
+.header .cart-items-container4 .ordered-items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.header .cart-items-container4 .ordered-items-list p strong {
+  color:red;
+}
+.header .cart-items-container4 .ordered-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.header .cart-items-container4 .ordered-item-img {
+  width: 100px;
+  height: 80px;
+  border-radius: 10px;
+ 
+}
+.header .cart-items-container4 .tracker {
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.header .cart-items-container4 .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+/* Add line only to first 3 steps */
+.header .cart-items-container4 .step.line::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 58%;
+  width: 83%;
+  height: 3px;
+  background-color: gold;
+  z-index: 0;
+}
+
+.header .cart-items-container4 .icon {
+  font-size: 24px;
+  z-index: 1;
+}
+
+.header .cart-items-container4 .label {
+  margin-top: 8px;
+  color: gold;
+  font-weight: bold;
+  font-size: 14px;
+}
 .home {
   min-height: 100vh;
   display: flex;
@@ -486,6 +689,14 @@ section {
   line-height: 1.5;
   padding: 1rem 0;
   color: #eee;
+}
+.home .content p span{
+  font-size: 1.8rem;
+  font-weight:400;
+  line-height: 1.5;
+  padding: 1rem 0;
+  color: #eee;
+  text-transform:lowercase;
 }
 
 .about .row {
@@ -821,7 +1032,7 @@ section {
     right: -100%;
     background: #000;
     width: 30rem;
-    height: calc(100vh - 9.5rem);
+    height: calc(101vh - 9.5rem);
   }
 
   .header .navbar.active {

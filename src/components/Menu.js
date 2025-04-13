@@ -15,8 +15,11 @@ const Menu = ({ cartItems, setCartItems,count,setcount }) => {
     } else {
       const newItem = { ...item, qnty: 1 };
       setCartItems([...cartItems, newItem]);  
+      toast.success("Added to your cart",{
+        autoClose: 500, 
+      });
     }
-    toast.success("Added to your cart");
+    
   };  
   const addToHeart = (index) => {
     const item = menu[index];
@@ -25,11 +28,15 @@ const Menu = ({ cartItems, setCartItems,count,setcount }) => {
     if (itemInCart) {
       const updatedCount = count.filter((countItem) => countItem.id !== item.id);
       setcount(updatedCount);  
-      toast.success("Removed from your Wishlist");
+      toast.success("Removed from your Wishlist",{
+        autoClose: 500, 
+      });
     } else {
       const newItem = { ...item, qnty: 1 };
       setcount([...count, newItem]);   
-      toast.success("Added to your Wishlist");
+      toast.success("Added to your Wishlist",{
+        autoClose: 500, 
+      });
     }
   };
     const [colors, setColors] = useState(menu.map(() => "white"));  
