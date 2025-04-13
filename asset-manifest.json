@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cart/static/css/main.2a1e4827.css",
-    "main.js": "/cart/static/js/main.28f6932a.js",
+    "main.css": "/cart/static/css/main.f928b1b7.css",
+    "main.js": "/cart/static/js/main.1911dde5.js",
     "static/js/488.56c13e01.chunk.js": "/cart/static/js/488.56c13e01.chunk.js",
     "static/media/pic-1.png": "/cart/static/media/pic-1.7e82d66ea7d447161fc2.png",
     "static/media/veg thali.png": "/cart/static/media/veg thali.7cbedb88b64c99c77925.png",
@@ -27,12 +27,12 @@
     "static/media/quote-img.png": "/cart/static/media/quote-img.b82f7adcdf23d3e828a3.png",
     "static/media/menu-6.png": "/cart/static/media/menu-6.1e627e81ea9cffd96843.png",
     "index.html": "/cart/index.html",
-    "main.2a1e4827.css.map": "/cart/static/css/main.2a1e4827.css.map",
-    "main.28f6932a.js.map": "/cart/static/js/main.28f6932a.js.map",
+    "main.f928b1b7.css.map": "/cart/static/css/main.f928b1b7.css.map",
+    "main.1911dde5.js.map": "/cart/static/js/main.1911dde5.js.map",
     "488.56c13e01.chunk.js.map": "/cart/static/js/488.56c13e01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a1e4827.css",
-    "static/js/main.28f6932a.js"
+    "static/css/main.f928b1b7.css",
+    "static/js/main.1911dde5.js"
   ]
 }
