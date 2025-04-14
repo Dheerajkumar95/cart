@@ -1,7 +1,6 @@
 import {React,useState} from "react";
 import { menu } from "../Data";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {toast,Toaster} from "react-hot-toast";
 const Menu = ({ cartItems, setCartItems,count,setcount }) => {
   const addToCart = (index) => {
     const item = menu[index];
@@ -51,7 +50,7 @@ const Menu = ({ cartItems, setCartItems,count,setcount }) => {
     };
   return (
     <>
-      <ToastContainer/>
+       <Toaster />
       <section className="menu" id="menu">
         <h1 className="heading">
           our<span>menu</span>

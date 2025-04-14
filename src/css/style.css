@@ -354,7 +354,8 @@ section {
   position: relative;
   align-items:center;
   max-width:200px;
-  margin: 8rem 14rem;
+  margin: 4rem 14rem;
+  padding:1rem
 }
 .header .cart-items-container2  h2 {
   position: relative;

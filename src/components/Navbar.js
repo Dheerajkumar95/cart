@@ -5,15 +5,14 @@ import Logo1 from "../images/popcorn.png";
 import profile from "../images/profile.png";
 import empty from "../images/6622ab37c6db6ac166dfec760a2f2939.gif"
 import loaderImage from "../images/loader.gif";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-const Navbar = ({ cartItems, setCartItems,count,setcount}) => {
+import {toast} from "react-hot-toast";
+const Navbar = ({cartItems, setCartItems,count,setcount}) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);  
+    }, 1000);  
     return () => clearTimeout(timer);
     
   }, []);
@@ -25,8 +24,8 @@ const Navbar = ({ cartItems, setCartItems,count,setcount}) => {
 const handleOrderNow = () => {
   if (cartItems.length > 0 && MyOrderRef.current) {
     setOrderPlaced(true);
-    setOrderedItems(cartItems); // Save ordered items for showing summary
-    setCartItems([]); // Clear cart
+    setOrderedItems(cartItems);  
+    setCartItems([]); 
     setcount(0);
     MyOrderRef.current.scrollIntoView({ behavior: 'smooth' });
   }
@@ -304,8 +303,6 @@ let hiddenName = useRef();
         <a href="#l" className="logoimg">
           <img src={Logo1} alt="Logo" />
         </a>
-        <h2>Welcome to Login</h2> 
-       
         <div>
           <label htmlFor="text">Name</label>
           <input type="text" size="25" placeholder="Dheeraj Kumar" />
